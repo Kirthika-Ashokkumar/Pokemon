@@ -36,3 +36,10 @@ void Inventory::printIems(){
         inventory.at(i).print();
     }
 }
+
+int Inventory::findItem(Item item) {
+    for (int i = 0; i < inventory.size(); i++) {
+        if (inventory[i] == item) return i;
+    }
+    return -1; // Return -1 if the item is not found
+}
